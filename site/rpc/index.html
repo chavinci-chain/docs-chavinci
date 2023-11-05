@@ -1,0 +1,1244 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../atomic/">
+      
+      
+        <link rel="next" href="../deneme/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>RPC - Docs Chavinci</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Docs Chavinci" class="md-header__button md-logo" aria-label="Docs Chavinci" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs Chavinci
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RPC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../node/" class="md-tabs__link">
+        
+  
+    
+  
+  Full Node
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../desktop/" class="md-tabs__link">
+        
+  
+    
+  
+  Desktop Wallet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mobile/" class="md-tabs__link">
+        
+  
+    
+  
+  Mobile Wallet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../staking/" class="md-tabs__link">
+        
+  
+    
+  
+  Staking
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../metadata/" class="md-tabs__link">
+        
+  
+    
+  
+  Token Metadata
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../atomic/" class="md-tabs__link">
+        
+  
+    
+  
+  Atomic Swaps
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  RPC
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../deneme/" class="md-tabs__link">
+        
+  
+    
+  
+  Deneme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs Chavinci" class="md-nav__button md-logo" aria-label="Docs Chavinci" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Docs Chavinci
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Metadata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atomic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atomic Swaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RPC
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RPC
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-request" class="md-nav__link">
+    Making request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens" class="md-nav__link">
+    Tokens
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deneme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deneme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/posts/how-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing the colors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-request" class="md-nav__link">
+    Making request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens" class="md-nav__link">
+    Tokens
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="rpc">RPC</h1>
+<p>You can interact with Chavinci node using remote procedure call (RPC). Node will reply with data in JSON format.</p>
+<h2 id="making-request">Making request</h2>
+<p>You can make request to your node via <code>Chavincichain-cli</code> or by sending POST request with payload to port <code>33440</code>.</p>
+<p>Example <code>Chavincichain-cli</code> request:</p>
+<pre><code>./Chavincichain-cli getblock 37eb3f4b73df32d22c4a1c58e91f6e7f0bf58e34e448a8e59d6b2576eeb9c238
+</code></pre>
+<p>Example POST request:</p>
+<pre><code>curl --data-binary '{&quot;jsonrpc&quot;:&quot;1.0&quot;,&quot;id&quot;:&quot;curltext&quot;,&quot;method&quot;:&quot;getblock&quot;,&quot;params&quot;:[&quot;37eb3f4b73df32d22c4a1c58e91f6e7f0bf58e34e448a8e59d6b2576eeb9c238&quot;]}' -H 'content-type:text/plain;' http://nodeuser:supersecurepassword@127.0.0.1:33440
+</code></pre>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>In order to make RPC request via POST request you must configure <code>rpcuser</code> and <code>rpcpassword</code> for your node.</p>
+</div>
+<h2 id="network">Network</h2>
+<p>This methods can be used to get general information about the network.</p>
+<p><code>getblockchaininfo</code> - returns info about blockchain</p>
+<pre><code class="language-JSON">{
+    &quot;chain&quot;: &quot;main&quot;,
+    &quot;blocks&quot;: 271823,
+    &quot;headers&quot;: 271823,
+    &quot;bestblockhash&quot;: &quot;e4bc6d4b818792a1fb2c57c08454099c4ebf1fcd2f23490573e0260918193b89&quot;,
+    &quot;difficulty&quot;: 0.002555948098984594,
+    &quot;mediantime&quot;: 1608143056,
+    &quot;verificationprogress&quot;: 1,
+    &quot;chainwork&quot;: &quot;0000000000000000000000000000000000000000000001f22354cf302a1790ec&quot;,
+    &quot;size_on_disk&quot;: 417448998,
+    &quot;pruned&quot;: 0,
+    &quot;softforks&quot;: [
+    ],
+    &quot;bip9_softforks&quot;: {
+    },
+    &quot;warnings&quot;: &quot;&quot;
+}
+</code></pre>
+<p><code>getblockhash &lt;height&gt;</code> - returns block hash</p>
+<p><code>0012eb05991b2ee8d074fde6c03089d2517937e28adc4219f0a4742b7805be96</code></p>
+<p><code>getblock &lt;hash&gt;</code> - returns block information</p>
+<pre><code class="language-JSON">{
+    &quot;hash&quot;: &quot;0012eb05991b2ee8d074fde6c03089d2517937e28adc4219f0a4742b7805be96&quot;,
+    &quot;confirmations&quot;: 271835,
+    &quot;strippedsize&quot;: 231,
+    &quot;size&quot;: 231,
+    &quot;weight&quot;: 924,
+    &quot;height&quot;: 1,
+    &quot;version&quot;: 536870912,
+    &quot;versionHex&quot;: &quot;20000000&quot;,
+    &quot;merkleroot&quot;: &quot;49f3bbf10c853367aa597d96a0307e8cb7e0e3ddc6e3e668c141143056a48133&quot;,
+    &quot;tx&quot;: [
+        &quot;49f3bbf10c853367aa597d96a0307e8cb7e0e3ddc6e3e668c141143056a48133&quot;
+    ],
+    &quot;time&quot;: 1589880735,
+    &quot;mediantime&quot;: 1589880735,
+    &quot;nonce&quot;: 284,
+    &quot;bits&quot;: &quot;1f3fffff&quot;,
+    &quot;difficulty&quot;: 2.384149979653205e-07,
+    &quot;chainwork&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000800&quot;,
+    &quot;previousblockhash&quot;: &quot;000c513d39b0e3657b7b0ca79b2d4b9b18c1f03dacb394acf0e71f49064b3306&quot;,
+    &quot;nextblockhash&quot;: &quot;003c074613108695565ea4e76957a346038ff7aa12ab951af3508398bb9b23fd&quot;,
+    &quot;flags&quot;: &quot;proof-of-work&quot;,
+    &quot;modifier&quot;: &quot;d2ec909dc48208a3a4d92162c14d116b48e27c7cb579f1c3cb4573e1b5c2d4ac&quot;
+}
+</code></pre>
+<h2 id="transactions">Transactions</h2>
+<p>This methods can be used to get information about transactions.</p>
+<p><code>getrawtransaction &lt;hash&gt; &lt;verbose&gt;</code> - returns information about transaction (set <code>verbose</code> to <code>true</code> for json output)</p>
+<pre><code class="language-JSON">{
+    &quot;txid&quot;: &quot;49f3bbf10c853367aa597d96a0307e8cb7e0e3ddc6e3e668c141143056a48133&quot;,
+    &quot;hash&quot;: &quot;49f3bbf10c853367aa597d96a0307e8cb7e0e3ddc6e3e668c141143056a48133&quot;,
+    &quot;version&quot;: 1,
+    &quot;timestamp&quot;: 1589880735,
+    &quot;size&quot;: 149,
+    &quot;vsize&quot;: 149,
+    &quot;locktime&quot;: 0,
+    &quot;vin&quot;: [
+        {
+            &quot;coinbase&quot;: &quot;510101&quot;,
+            &quot;sequence&quot;: 4294967295
+        }
+    ],
+    &quot;vout&quot;: [
+        {
+            &quot;value&quot;: 2100000000,
+            &quot;n&quot;: 0,
+            &quot;scriptPubKey&quot;: {
+                &quot;asm&quot;: &quot;03131079e6248a288fcf9daf9828f09544e3f853e870afc651efdb0ca9298059ab OP_CHECKSIG&quot;,
+                &quot;hex&quot;: &quot;2103131079e6248a288fcf9daf9828f09544e3f853e870afc651efdb0ca9298059abac&quot;,
+                &quot;reqSigs&quot;: 1,
+                &quot;type&quot;: &quot;pubkey&quot;,
+                &quot;addresses&quot;: [
+                    &quot;KrbwDveomVrY4fNH5GrHU52A2HqpzgmCkG&quot;
+                ]
+            },
+            &quot;spentTxId&quot;: &quot;df766dc83db4a93857cb3076bd043ea06138526e282744ad63a478eaa6bb0662&quot;,
+            &quot;spentIndex&quot;: 0,
+            &quot;spentHeight&quot;: 12,
+            &quot;valueSat&quot;: 210000000000000000
+        },
+        {
+            &quot;value&quot;: 0,
+            &quot;n&quot;: 1,
+            &quot;scriptPubKey&quot;: {
+                &quot;asm&quot;: &quot;OP_RETURN aa21a9ede2f61c3f71d1defd3fa999dfa36953755c690689799962b48bebd836974e8cf9&quot;,
+                &quot;hex&quot;: &quot;6a24aa21a9ede2f61c3f71d1defd3fa999dfa36953755c690689799962b48bebd836974e8cf9&quot;,
+                &quot;type&quot;: &quot;nulldata&quot;
+            },
+            &quot;valueSat&quot;: 0
+        }
+    ],
+    &quot;hex&quot;: &quot;010000009fa7c35e010000000000000000000000000000000000000000000000000000000000000000ffffffff03510101ffffffff020000d52ae311ea02232103131079e6248a288fcf9daf9828f09544e3f853e870afc651efdb0ca9298059abac0000000000000000266a24aa21a9ede2f61c3f71d1defd3fa999dfa36953755c690689799962b48bebd836974e8cf900000000&quot;,
+    &quot;blockhash&quot;: &quot;0012eb05991b2ee8d074fde6c03089d2517937e28adc4219f0a4742b7805be96&quot;,
+    &quot;height&quot;: 1,
+    &quot;confirmations&quot;: 271841,
+    &quot;time&quot;: 1589880735,
+    &quot;blocktime&quot;: 1589880735
+}
+</code></pre>
+<p><code>getchaintxstats</code> - returns statistics about the total number and rate of transactions in the chain</p>
+<pre><code class="language-JSON">{
+    &quot;time&quot;: 1608144544,
+    &quot;txcount&quot;: 1271608,
+    &quot;window_block_count&quot;: 40500,
+    &quot;window_tx_count&quot;: 246854,
+    &quot;window_interval&quot;: 2724352,
+    &quot;txrate&quot;: 0.09061017078556663
+}
+</code></pre>
+<h2 id="wallet">Wallet</h2>
+<p>This methods can be used to get information about wallet.</p>
+<p><code>getbalance</code> - returns entite Chavinci balance of your wallet</p>
+<p><code>0.00000000</code></p>
+<p><code>listmytokens</code> - returns list of all tokens your wallet is holding</p>
+<pre><code class="language-JSON">{
+  &quot;CCA&quot;: 984.00000000
+}
+</code></pre>
+<p><code>getnewaddress &lt;label&gt;</code> - returns new address and assign label if it was set</p>
+<p><code>KpmtABZnYx2qxJwu4wSmRSsEuJ6NwJFd5S</code></p>
+<p><code>listtransactions &lt;label&gt; &lt;count&gt; &lt;skip&gt;</code> - returns list of last transactions for given label (use <code>*</code> to get list of all incoming transactions)</p>
+<pre><code class="language-JSON">[
+    {
+        &quot;account&quot;: &quot;testlabel&quot;,
+        &quot;token_type&quot;: &quot;transfer_token&quot;,
+        &quot;token_name&quot;: &quot;CCA&quot;,
+        &quot;amount&quot;: 45.48900000,
+        &quot;address&quot;: &quot;KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW&quot;,
+        &quot;vout&quot;: 0,
+        &quot;category&quot;: &quot;receive&quot;,
+        &quot;blockhash&quot;: &quot;3b816b7cb73c98ad22e4673f900eb2f6a9a0a15692227769ab3dc95d301f8ec4&quot;,
+        &quot;blockindex&quot;: 2,
+        &quot;blocktime&quot;: 1607785696,
+        &quot;txid&quot;: &quot;cacf4bf3dcc43fbe6a76ff7d9f6b4625cda409538928cc9c89881305db95e5d5&quot;,
+        &quot;confirmations&quot;: 5510,
+        &quot;walletconflicts&quot;: [
+        ],
+        &quot;time&quot;: 1607785660,
+        &quot;timereceived&quot;: 1607785660
+    },
+    {
+        &quot;account&quot;: &quot;testlabel&quot;,
+        &quot;token_type&quot;: &quot;transfer_token&quot;,
+        &quot;token_name&quot;: &quot;CCA&quot;,
+        &quot;amount&quot;: 45.51290000,
+        &quot;address&quot;: &quot;KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW&quot;,
+        &quot;vout&quot;: 0,
+        &quot;category&quot;: &quot;receive&quot;,
+        &quot;blockhash&quot;: &quot;22b5cebcae8a6c3fa3ccf4acd67293ae42b2273e606e97dd9d4be751afa9df9c&quot;,
+        &quot;blockindex&quot;: 2,
+        &quot;blocktime&quot;: 1607879552,
+        &quot;txid&quot;: &quot;61f7fcea979aec1a9b8812f36e75589ea2b9d4f3ad168b4e1d2e9a00d6206796&quot;,
+        &quot;confirmations&quot;: 4115,
+        &quot;walletconflicts&quot;: [
+        ],
+        &quot;time&quot;: 1607879552,
+        &quot;timereceived&quot;: 1607879552
+    },
+    {
+        &quot;account&quot;: &quot;testlabel&quot;,
+        &quot;token_type&quot;: &quot;transfer_token&quot;,
+        &quot;token_name&quot;: &quot;CCA&quot;,
+        &quot;amount&quot;: 45.53510000,
+        &quot;address&quot;: &quot;KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW&quot;,
+        &quot;vout&quot;: 0,
+        &quot;category&quot;: &quot;receive&quot;,
+        &quot;blockhash&quot;: &quot;e9f844b193a3e75eb60c95b5ab2db7eb51368307c6fa55cf859bd9a860c0505a&quot;,
+        &quot;blockindex&quot;: 2,
+        &quot;blocktime&quot;: 1607964192,
+        &quot;txid&quot;: &quot;d16972d5f1b578e143e9cc93f33cefec8eb52926b588d14e425ba9dceef434a4&quot;,
+        &quot;confirmations&quot;: 2854,
+        &quot;walletconflicts&quot;: [
+        ],
+        &quot;time&quot;: 1607964141,
+        &quot;timereceived&quot;: 1607964141
+    }
+]
+</code></pre>
+<p><code>sendtoaddress &lt;address&gt; &lt;amount&gt; &lt;locktime&gt;</code> - sends specified amount of Chavinci to address with locktime (if it was set)</p>
+<p><code>d16972d5f1b578e143e9cc93f33cefec8eb52926b588d14e425ba9dceef434a4</code></p>
+<p><code>sendmany "*" &lt;recepients&gt;</code> - sends Chavinci to multiple recipients (second argument must be set to <code>*</code>). Recepients is regular JSON object with address as a key and amount as value: <code>{"cud4EpNGfSqecAdB3FH6x6wvNfVEL2iMn": 10}</code></p>
+<pre><code class="language-JSON">[
+    &quot;cacf4bf3dcc43fbe6a76ff7d9f6b4625cda409538928cc9c89881305db95e5d5&quot;
+]
+</code></pre>
+<p><code>transfer &lt;token&gt; &lt;amount&gt; &lt;address&gt; &lt;locktime&gt;</code> - sends specified amount of token to address with locktime (if it was set)</p>
+<pre><code class="language-JSON">[
+    &quot;7c9f23b4e8c4df8fa044e19cdadfb1be8cf9a1e38687b4e877978a9747f13780&quot;
+]
+</code></pre>
+<p><code>transfermany &lt;token&gt; &lt;recepients&gt;</code> - sends token to multiple recipients (second argument must be set to <code>*</code>). Recepients is regular JSON object with address as a key and amount as value: <code>{"cud4EpNGfSqecAdB3FH6x6wvNfVEL2iMn": 10}</code> </p>
+<pre><code class="language-JSON">[
+    &quot;61f7fcea979aec1a9b8812f36e75589ea2b9d4f3ad168b4e1d2e9a00d6206796&quot;
+]
+</code></pre>
+<h2 id="tokens">Tokens</h2>
+<p>This methods can be used to create/update tokens and get related token information.</p>
+<p><code>issue &lt;name&gt; &lt;amount&gt; &lt;address&gt; &lt;change_address&gt; &lt;units&gt; &lt;reissuable&gt;</code> - issue token to address (if specified)</p>
+<pre><code class="language-JSON">[
+    &quot;94cac36a44021ee3e8cdf7365b34212e588679b927858453a714d4fa97df033a&quot;
+]
+</code></pre>
+<p><code>reissue &lt;name&gt; &lt;amount&gt; &lt;address&gt; &lt;change_address&gt; &lt;reissuable&gt; &lt;units&gt;</code> - reissue token and/or update infromation about it (for example change number of units or reissuability)</p>
+<pre><code class="language-JSON">[
+    &quot;0bcd37b40b79608f582a0fb17666f5c639d79acf72e4d5ce25c3726b3f7fea33&quot;
+]
+</code></pre>
+<p><code>listtokens</code> - returns list of all existing tokens</p>
+<pre><code class="language-JSON">[
+    &quot;CCA&quot;
+]
+</code></pre>
+<p><code>gettokendata &lt;token&gt;</code> - returns information about tocken</p>
+<pre><code class="language-JSON">{
+    &quot;name&quot;: &quot;CCA&quot;,
+    &quot;amount&quot;: 1000000000.00000000,
+    &quot;units&quot;: 8,
+    &quot;reissuable&quot;: 1
+}
+</code></pre>
+<p><code>listtokenbalancesbyaddress &lt;address&gt;</code> - return all token balances for specified address</p>
+<pre><code class="language-JSON">{
+    &quot;CCA&quot;: 45731.24990000
+}
+</code></pre>
+<p><code>listaddressesbytoken &lt;token&gt;</code> - returns list of addresses/balances which hold specified token</p>
+<pre><code class="language-JSON">{
+    &quot;cbLnN9J9wuPVzkqeTjzq9efRBSxTHJGh2&quot;: 45731.24990000,
+    &quot;chEy59XfADWu5LspUvN9KYbaggTb3thmr&quot;: 5138.96400000,
+    &quot;cmyLEGXAxzHLNEuj8wTiXbCzLR4Uaon79&quot;: 10277.92800000,
+    &quot;cqDW4apwJi6QsHN3q3h5LMXWw1LgtaWgz&quot;: 3.01100000,
+    &quot;cqS79DH5SGqrNGjKVDfHQLGCsBxYKMp4j&quot;: 25522.00000000,
+    &quot;cr1m9cry8yhjUzBLhNxbvQsmqc1u7TaWD&quot;: 4079.46780000,
+    &quot;crqLZGi82SJdVukvvcTfRpsmkpCx4fX4K&quot;: 108874.53530000,
+    &quot;cswvLxmJJJCBNoVW3U7YNqLDNS7i9d6bx&quot;: 3.00000000,
+    &quot;ctUYjQP8BBQwTFgJZebnxoiAqsF11DmXE&quot;: 94700.49149998,
+    &quot;cud4EpNGfSqecAdB3FH6x6wvNfVEL2iMn&quot;: 1.00000000,
+    &quot;cvmj3GNV4DE8Ms8yuKMGLHZDc88pr8Gzv&quot;: 1000.00000000,
+    &quot;cvwTDCqFshmF1Xnqo1yj29TG8GQwyUHg4&quot;: 27703.98720000,
+    &quot;cwA5otMB4qCzvFiERcBFj6JdaZ2Vvykv7&quot;: 1000000.00000000,
+    &quot;cwKUUoZUw2DbXu7NWfXKySkSUa9WnRqR6&quot;: 12801.75300000,
+    &quot;cwufjbDrozt6n5up1vSchveokeoXV9L82&quot;: 221074.64239996,
+    &quot;cxemToRTChASMY85KSS8rfHHn4YnuEpbJ&quot;: 8811.66599998,
+    &quot;cxrS24CN53HUkGHzZUybHnqC8hzfBH562&quot;: 11.88460509,
+    &quot;czEAcXbh2nqBSjSrV3dYFWATrTxvAGcBh&quot;: 14.00000000,
+    &quot;cX6LWrCX28etVmwdTaWX6X7J8pxBqLgF3u&quot;: 38128.91369999,
+    &quot;cX6SfVXJMHSF6e3xrzcGkcpSdu9ETBZtzr&quot;: 127377.29239999,
+    &quot;cX7BYLcxQpt3CANC3KPL8FaLCRDFDQRdCD&quot;: 27979.77800000,
+    ...
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Copyright &copy; 2023 Chavinci
+    </div>
+    
+    
+    
+</div>
+        
+          <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ChavinciNetwork" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/chavinci-chain" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@chavinci" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/chavinci/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/zfJEzYEnVD" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+        
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>
