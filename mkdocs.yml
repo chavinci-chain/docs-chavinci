@@ -16,9 +16,16 @@ theme:
 
 nav:
   - Home: index.md
-  - About: about.md
+  - Full Node: node.md
+  - Desktop Wallet: desktop.md
+  - Mobile Wallet: mobile.md
+  - Staking: staking.md
+  - Token Metadata: metadata.md
+  - Atomic Swaps: atomic.md
+  - RPC: rpc.md
+  - Deneme: deneme.md
   - Blog: 
-    - Blog: blog/index.md
+    - Home: blog/index.md
     - Changing the colors: blog/posts/how-to-use.md
   - Getting started: 
     - Installation: getting-started.md
