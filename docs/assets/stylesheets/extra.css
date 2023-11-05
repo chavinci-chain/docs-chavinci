@@ -1,0 +1,14 @@
+:root {
+    /* --md-primary-fg-color: #F4F4ED;
+    --md-primary-fg-color--light: black;
+    --md-primary-fg-color--dark: #F4F4ED; */
+
+
+    --md-primary-fg-color: #F4F4ED;
+    --md-primary-fg-color--light: red;
+    --md-primary-fg-color--dark: red;
+    --md-primary-bg-color: black;
+    --md-primary-bg-color--light: black;
+
+
+}

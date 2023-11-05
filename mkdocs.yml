@@ -1,1 +1,54 @@
-site_name: My Docs
+site_name: Docs Chavinci
+
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    primary: custom
+    scheme: slate
+  language: en 
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+  logo: assets/logo.png
+  favicon: assets/images/favicon.png
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog: 
+    - Blog: blog/index.md
+    - Changing the colors: blog/posts/how-to-use.md
+  - Getting started: 
+    - Installation: getting-started.md
+
+
+    
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ChavinciNetwork
+    - icon: fontawesome/brands/github
+      link: https://github.com/chavinci-chain
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@chavinci
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/chavinci/
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/zfJEzYEnVD
+
+# Copyright
+copyright: Copyright &copy; 2023 Chavinci
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+
