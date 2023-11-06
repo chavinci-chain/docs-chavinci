@@ -16,19 +16,27 @@ theme:
 
 nav:
   - Home: index.md
-  - Full Node: node.md
-  - Desktop Wallet: desktop.md
-  - Mobile Wallet: mobile.md
-  - Staking: staking.md
-  - Token Metadata: metadata.md
-  - Atomic Swaps: atomic.md
-  - RPC: rpc.md
-  - Deneme: deneme.md
-  - Blog: 
-    - Home: blog/index.md
-    - Changing the colors: blog/posts/how-to-use.md
-  - Getting started: 
-    - Installation: getting-started.md
+  - Overview: 
+    - Learn: overview/learn.md
+    - Getting Started: overview/getting-stared.md
+    - Network: overview/network.md
+    - Glossary: overview/glossary.md
+  - Wallet: 
+    - Desktop Wallet: wallet/desktop.md
+    - Mobile Wallet: wallet/mobile.md
+  - Developer:
+    - Full Node: developer/node.md
+    - Staking: developer/staking.md
+    - Token Metadata: developer/metadata.md
+    - Atomic Swaps: developer/atomic.md
+    - RPC: developer/rpc.md
+  
+  - Blog & FAQ's:
+    - Blog: 
+      - First Blog: blog/first-blog.md
+    - FAQ: faq.md
+     
+  - Compony: company.md
 
 
     

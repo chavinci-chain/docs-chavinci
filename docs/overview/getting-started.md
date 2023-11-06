@@ -89,6 +89,8 @@ troubleshoot if you run into errors.
   [Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
   [Using Python's pip to Manage Your Projects' Dependencies]: https://realpython.com/what-is-pip/
 
+
+
 ### with docker
 
 The official [Docker image] is a great way to get up and running in a few
