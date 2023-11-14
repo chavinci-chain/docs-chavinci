@@ -12,12 +12,12 @@ For staking with full node you must add `staking=1` param to your config file (o
 
 For staking in desktop wallet first you should go to `Receive` tab and generate deposit address.
 
-![Receive](assets/staking/1.png)
+![Receive](../assets/images/staking/1.png)
 
 After clicking `Request payment` button wallet will generate and display your address.
 
-![New address](assets/staking/2.png)
+![New address](../assets/images/staking/2.png)
 
 Once you received coins to your wallet, you can go to `Overview` page and click `Start staking`. Once coins you sent to wallet reach their maturity (60 blocks) wallet will start validation process and you will be receiving rewards after each validated block.
 
-![New address](assets/staking/3.png)
+![New address](../assets/images/staking/3.png)

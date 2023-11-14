@@ -29,12 +29,12 @@ Chavinci software runs on all operating systems: Linux, macOS and Windows. You c
 
 Once you downloaded (or compiled) binaries at your machine, you will have this two binaries:
 
- - `Chavincichaind` - headless Chavinci daemon responsible for syncing blockchain and providing wallet service
- - `Chavincichain-cli` - command line client which allows interact with Chavinci node and wallet
+ - `./chad` - headless Chavinci daemon responsible for syncing blockchain and providing wallet service
+ - `./cha-cli` - command line client which allows interact with Chavinci node and wallet
 
 ## Configuration
 
-You can specify node params in `Chavincichain.conf` file at `.Chavincichain` folder (or `C:\Users\Username\AppData\Roaming\ChavinciChain` on Windows).
+You can specify node params in `chachain.conf` file at `.chachain` folder (or `C:\Users\Username\AppData\Roaming\ChavinciChain` on Windows).
 
 Example config file looks like this:
 
@@ -59,3 +59,51 @@ If you launched Chavinci node in daemon mode, it can be stopped using cli utilit
 ```
 Chavincichain-cli stop
 ```
+
+
+## Chavinci Console RPC Functions
+
+Here are some common Chavinci RPC functions you can use with Chavinci-core or a similar module:
+
+- `getblockchaininfo`: Returns basic information about the Chavinci network.
+- `getblock blockhash`: Retrieves information about a specific block.
+- `gettransaction txid`: Retrieves information about a specific transaction.
+- `getbalance [account], [minconf], [include_watchonly] `: Retrieves the balance of a specific account or all accounts.
+- `listtransactions  [account], [count], [skip], [include_watchonly] `: Lists the transaction history of a specific account or all accounts.
+- `sendtoaddress  address, amount, [comment], [comment_to], [subtractfeefromamount], [replaceable], [conf_target], [estimate_mode] `: Sends Chavinci to a specific address.
+- `listunspent [minconf], [maxconf], [addresses] `: Lists unspent transactions.
+- `listreceivedbyaddress [minconf], [include_empty], [include_watchonly] `: Lists the amount of Chavinci sent to a specific account.
+- `createwallet wallet_name, [disable_private_keys], [blank], [passphrase] `: Creates a new Chavinci wallet.
+- `getnewaddress [account] `: Generates a new Chavinci address.
+- `listwallets`: Lists the wallets on the Chavinci node.
+- `encryptwallet passphrase `: Encrypts the wallet.
+- `backupwallet destination `: Backs up the wallet.
+- `importaddress address, [label], [rescan], [p2sh] `: Imports an external Chavinci address.
+- `importprivkey privkey, [label], [rescan] `: Imports a private key.
+- `sendmany from_account, to_addresses, [minconf], [comment], [subtractfeefrom] `: Sends Chavinci to multiple addresses.
+- `generatetoaddress blocks, address, [maxtries] `: Generates blocks to a specific address for the test network.
+
+
+## Chavinci Node.js Client
+
+The Node.js client for Chavinci Core or a similar Chavinci node supports a variety of Remote Procedure Call (RPC) functions. Here are some common Chavinci RPC functions you can use with Chavinci-core or a similar module:
+
+- `getBlockchainInfo()`: Returns basic information about the Chavinci network.
+- `getBlock(blockhash)`: Retrieves information about a specific block.
+- `getTransaction(txid)`: Retrieves information about a specific transaction.
+- `getBalance([account], [minconf], [include_watchonly])`: Retrieves the balance of a specific account or all accounts.
+- `listTransactions([account], [count], [skip], [include_watchonly])`: Lists the transaction history of a specific account or all accounts.
+- `sendToAddress(address, amount, [comment], [comment_to], [subtractfeefromamount], [replaceable], [conf_target], [estimate_mode])`: Sends Chavinci to a specific address.
+- `listUnspent([minconf], [maxconf], [addresses])`: Lists unspent transactions.
+- `listReceivedByAddress([minconf], [include_empty], [include_watchonly])`: Lists the amount of Chavinci sent to a specific account.
+- `createWallet(wallet_name, [disable_private_keys], [blank], [passphrase])`: Creates a new Chavinci wallet.
+- `getNewAddress([account])`: Generates a new Chavinci address.
+- `listWallets()`: Lists the wallets on the Chavinci node.
+- `encryptWallet(passphrase)`: Encrypts the wallet.
+- `backupWallet(destination)`: Backs up the wallet.
+- `importAddress(address, [label], [rescan], [p2sh])`: Imports an external Chavinci address.
+- `importPrivKey(privkey, [label], [rescan])`: Imports a private key.
+- `sendMany(from_account, to_addresses, [minconf], [comment], [subtractfeefrom])`: Sends Chavinci to multiple addresses.
+- `generateToAddress(blocks, address, [maxtries])`: Generates blocks to a specific address for the test network.
+
+These are just a few examples of RPC functions, and Chavinci Core or other Chavinci nodes support many more. Refer to the documentation of the client library you are using to find and utilize the specific functions you need.
