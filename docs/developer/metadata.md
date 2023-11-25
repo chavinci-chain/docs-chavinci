@@ -33,27 +33,28 @@ Example data:
 
 ```JSON
 {
-	"name": "Mjölnir",
-	"description": "Mjölnir is the hammer of the thunder god Thor in Norse mythology, used both as a devastating weapon and as a divine instrument to provide blessings.",
-	"image": "ipfs://QmeJPx9UpmyZ4536oSp4cNb9C1aSX4PzT8n9mrYppQ2KrN",
+	"name": "Yggdrasil",
+	"description": "Yggdrasil is an immense mythical tree that connects the nine worlds in Norse cosmology.",
+	"image": "ipfs://QmYggdrasilImageHash123",
 	"properties": {
-		"simple_property": "example value",
-		"rich_property": {
-			"name": "Name",
-			"value": "123",
-			"display_value": "123 Example Value",
-			"class": "emphasis",
+		"simple_property": "new value",
+		"custom_property": {
+			"name": "Custom Property",
+			"value": "Custom Value",
+			"display_value": "This is a custom property.",
+			"class": "custom-class",
 			"css": {
-				"color": "#ffffff",
-				"font-weight": "bold",
-				"text-decoration": "underline"
+				"color": "#ff9900",
+				"font-size": "16px",
+				"font-weight": "normal"
 			}
 		},
-		"array_property": {
-			"name": "Name",
-			"value": [1,2,3,4],
-			"class": "emphasis"
+		"another_array_property": {
+			"name": "Another Array",
+			"value": [5,6,7,8],
+			"class": "another-class"
 		}
 	}
 }
+
 ```

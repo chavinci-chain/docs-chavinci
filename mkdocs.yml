@@ -7,48 +7,27 @@ theme:
   palette:
     primary: custom
     scheme: slate
+ 
   language: en 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
     - search.share
+    - content.code.copy
+    - navigation.footer
+    - navigation.indexes
+   
   logo: assets/logo.png
   favicon: assets/images/favico.png
- 
 
-nav:
-  - Home: index.md
-  - Overview: 
-    - Learn: overview/learn.md
-    - Getting Started: overview/getting-stared.md
-    - Network: overview/network.md
-    - Glossary: overview/glossary.md
-  - Wallet: 
-    - Desktop Wallet: wallet/desktop.md
-    - Mobile Wallet: wallet/mobile.md
-  - Developer:
-    - Full Node: developer/node.md
-    - Staking: developer/staking.md
-    - Token Metadata: developer/metadata.md
-    - Atomic Swaps: developer/atomic.md
-    - RPC: developer/rpc.md
-  
-  - Blog & FAQ's:
-    - Blog: 
-      - First Blog: blog/first-blog.md
-    - FAQ: faq.md
-     
-  - Company: company.md
-
-
-    
 
 plugins:
+  - blog 
   - tags:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    
+ 
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -79,6 +58,39 @@ extra:
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
   
 
+
+markdown_extensions:
+
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+
+nav:
+  - Home: index.md
+  - Overview: 
+    - Learn: overview/learn.md
+    - Getting Started: overview/getting-stared.md
+    - Network: overview/network.md
+    - Glossary: overview/glossary.md
+  - Wallet: 
+    - Desktop Wallet: wallet/desktop.md
+    - Mobile Wallet: wallet/mobile.md
+  - Developer:
+    - Full Node: developer/node.md
+    - Staking: developer/staking.md
+    - Token Metadata: developer/metadata.md
+    - Atomic Swaps: developer/atomic.md
+    - RPC: developer/rpc.md
+  
+  - Blog & FAQ's:
+    - Blog:
+      - blog/index.md
+    - FAQ: faq.md
+     
+  - Company: company.md
+
+
+    
 
 
 # Copyright

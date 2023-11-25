@@ -4,12 +4,12 @@ You can interact with Chavinci node using remote procedure call (RPC). Node will
 
 ## Making request
 
-You can make request to your node via `Chavincichain-cli` or by sending POST request with payload to port `33440`.
+You can make request to your node via `cha-cli` or by sending POST request with payload to port `33440`.
 
-Example `Chavincichain-cli` request:
+Example `./cha-cli` request:
 
 ```
-./Chavincichain-cli getblock 37eb3f4b73df32d22c4a1c58e91f6e7f0bf58e34e448a8e59d6b2576eeb9c238
+./cha-cli getblock 37eb3f4b73df32d22c4a1c58e91f6e7f0bf58e34e448a8e59d6b2576eeb9c238
 ```
 
 Example POST request:
@@ -169,7 +169,7 @@ This methods can be used to get information about wallet.
 
 ```JSON
 {
-  "CCA": 984.00000000
+  "CHA": 984.00000000
 }
 ```
 
@@ -186,7 +186,7 @@ This methods can be used to get information about wallet.
 	{
 		"account": "testlabel",
 		"token_type": "transfer_token",
-		"token_name": "CCA",
+		"token_name": "CHA",
 		"amount": 45.48900000,
 		"address": "KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW",
 		"vout": 0,
@@ -204,7 +204,7 @@ This methods can be used to get information about wallet.
 	{
 		"account": "testlabel",
 		"token_type": "transfer_token",
-		"token_name": "CCA",
+		"token_name": "CHA",
 		"amount": 45.51290000,
 		"address": "KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW",
 		"vout": 0,
@@ -222,7 +222,7 @@ This methods can be used to get information about wallet.
 	{
 		"account": "testlabel",
 		"token_type": "transfer_token",
-		"token_name": "CCA",
+		"token_name": "CHA",
 		"amount": 45.53510000,
 		"address": "KqFZpfbZ6kFFWqg22jv3cBES8o4cCERmW",
 		"vout": 0,
@@ -297,7 +297,7 @@ This methods can be used to create/update tokens and get related token informati
 
 ```JSON
 [
-	"CCA"
+	"CHA"
 ]
 ```
 
@@ -306,7 +306,7 @@ This methods can be used to create/update tokens and get related token informati
 
 ```JSON
 {
-	"name": "CCA",
+	"name": "CHA",
 	"amount": 1000000000.00000000,
 	"units": 8,
 	"reissuable": 1
@@ -318,7 +318,7 @@ This methods can be used to create/update tokens and get related token informati
 
 ```JSON
 {
-	"CCA": 45731.24990000
+	"CHA": 45731.24990000
 }
 ```
 
@@ -351,3 +351,30 @@ This methods can be used to create/update tokens and get related token informati
 	...
 }
 ```
+
+
+
+
+## Node.js Client
+
+The Node.js client for Chavinci Core or a similar Chavinci node supports a variety of Remote Procedure Call (RPC) functions. Here are some common Chavinci RPC functions you can use with Chavinci-core or a similar module:
+
+- `getBlockchainInfo()`: Returns basic information about the Chavinci network.
+- `getBlock(blockhash)`: Retrieves information about a specific block.
+- `getTransaction(txid)`: Retrieves information about a specific transaction.
+- `getBalance([account], [minconf], [include_watchonly])`: Retrieves the balance of a specific account or all accounts.
+- `listTransactions([account], [count], [skip], [include_watchonly])`: Lists the transaction history of a specific account or all accounts.
+- `sendToAddress(address, amount, [comment], [comment_to], [subtractfeefromamount], [replaceable], [conf_target], [estimate_mode])`: Sends Chavinci to a specific address.
+- `listUnspent([minconf], [maxconf], [addresses])`: Lists unspent transactions.
+- `listReceivedByAddress([minconf], [include_empty], [include_watchonly])`: Lists the amount of Chavinci sent to a specific account.
+- `createWallet(wallet_name, [disable_private_keys], [blank], [passphrase])`: Creates a new Chavinci wallet.
+- `getNewAddress([account])`: Generates a new Chavinci address.
+- `listWallets()`: Lists the wallets on the Chavinci node.
+- `encryptWallet(passphrase)`: Encrypts the wallet.
+- `backupWallet(destination)`: Backs up the wallet.
+- `importAddress(address, [label], [rescan], [p2sh])`: Imports an external Chavinci address.
+- `importPrivKey(privkey, [label], [rescan])`: Imports a private key.
+- `sendMany(from_account, to_addresses, [minconf], [comment], [subtractfeefrom])`: Sends Chavinci to multiple addresses.
+- `generateToAddress(blocks, address, [maxtries])`: Generates blocks to a specific address for the test network.
+
+These are just a few examples of RPC functions, and Chavinci Core or other Chavinci nodes support many more. Refer to the documentation of the client library you are using to find and utilize the specific functions you need.
