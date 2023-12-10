@@ -1,3 +1,9 @@
-# Welcome to Docs Chavinci
+---
+template: home.html
+title: Chavinci Network
+social:
+  cards_layout_options:
+    title: Documentation that simply works
+---
 
-While being based on Bitcoin it utilises Proof-of-Stake and native token cration protocol which allow peoples to exchange tokens between each other using atomic swaps.
+Welcome to Material for MkDocs.

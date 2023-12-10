@@ -1,4 +1,7 @@
 site_name: Docs Chavinci
+site_description: >-
+  Chavinci Network is embarking on a journey with Proof-of-Stake 3.0 (Pos3), a technology that is revolutionizing the blockchain world. 
+  Pos3 is one of the main features that distinguishes Chavinci Network from other blockchain projects, going beyond previous generations in energy efficiency, speed and security
 
 
 theme:
@@ -27,7 +30,10 @@ plugins:
   - tags:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
- 
+  - minify:
+      minify_html: true
+
+
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -66,12 +72,16 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 nav:
-  - Home: index.md
+  
   - Overview: 
-    - Learn: overview/learn.md
-    - Getting Started: overview/getting-stared.md
-    - Network: overview/network.md
-    - Glossary: overview/glossary.md
+    - overview/index.md
+    - Key Features : overview/key-features.md
+    - The Octopus Labs Vision: overview/the-octopus-labs-vision.md
+    - MLT and Cha PoS v3.0: overview/mlt-and-cha-pos-v3.0.md
+    - User-Centric Approach: overview/user-centric-approach.md
+    - D-Mail System: overview/d-mail-system.md
+    - Security and Accessibility: overview/security-and-accessibility.md
+    - Glossary: https://chavinci.com/glossary
   - Wallet: 
     - Desktop Wallet: wallet/desktop.md
     - Mobile Wallet: wallet/mobile.md
@@ -87,7 +97,15 @@ nav:
       - blog/index.md
     - FAQ: faq.md
      
-  - Company: company.md
+  - Company: 
+    - company/index.md
+    - Chavinci's Journey: company/chavincis-journey.md
+    - Corporate Responsibility: company/corporate-responsibility.md
+    - Innovation and Technology at Chavinci: company/innovation-and-technology-at-chavinci.md
+    - Company Culture and Careers: company/company-culture-and-careers.md
+    - Press and Media Resources: company/press-and-media-resources.md
+    - Contact Information: company/contact-information.md
+     
 
 
     

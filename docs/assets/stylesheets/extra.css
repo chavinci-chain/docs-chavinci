@@ -12,3 +12,9 @@
 
 
 }
+
+
+::selection {
+    color: white;
+    background: #22c55e;
+}

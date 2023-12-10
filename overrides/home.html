@@ -1,0 +1,58 @@
+{#-
+This file was automatically generated - do not edit
+-#}
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+
+<style>
+  .md-header {
+    position: initial
+  }
+
+  .md-main__inner {
+    margin: 0
+  }
+
+  .md-content {
+    display: none
+  }
+
+  @media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+      display: none
+    }
+  }
+</style>
+<section class="mdx-container" >
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero">
+      <div class="mdx-hero__image" style="position: absolute; top: 0; left: 0; right: 0; z-index: -1;">
+        <img src="assets/images/hero-bg.png" alt="" width="1659" height="0" draggable="false" style="height: 100vh; object-fit: cover;">
+      </div>
+      <div class="mdx-hero__content " style="color: white !important; max-width: 32rem; position: relative; width: 100%; ">
+        <div style="position: absolute; z-index: 10; left: 0; top: 12.2rem;">
+          <h1  style="color: white !important; text-shadow: 2px 2px 5px black;">Technical documentation that just works</h1>
+          
+          <p style="text-shadow: 2px 2px 5px black;">{{ config.site_description }}. Set up your node in 5 minutes.</p>
+          <a href="{{ '/overview/' | url }}" title="Chavinci Network Overview" class="md-button md-button--primary">
+            Quick start
+          </a>
+          <a style="text-shadow: 2px 2px 5px black;" href="{{ 'developer/node/' | url }}" title="Chavinci Network for Developer" class="md-button">
+            Go Node Setup
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
