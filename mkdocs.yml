@@ -95,7 +95,7 @@ nav:
   - Blog & FAQ's:
     - Blog:
       - blog/index.md
-    # - FAQ: faq.md
+    - FAQ: faq.md
      
   - Company: 
     - company/index.md
