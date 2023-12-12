@@ -29,22 +29,29 @@ This file was automatically generated - do not edit
       display: none
     }
   }
+  .md-button{
+    border-radius: 50px !important;
+  }
+  .md-button:hover{
+    background-color: #22c55e !important;
+    border-color: #22c55e !important;
+  }
 </style>
 <section class="mdx-container" >
   <div class="md-grid md-typeset">
     <div class="mdx-hero">
-      <div class="mdx-hero__image" style="position: absolute; top: 0; left: 0; right: 0; z-index: -1;">
-        <img src="assets/images/hero-bg.png" alt="" height="0" draggable="false" style="height: 100vh; object-fit: cover; width: 100%;">
+      <div class="mdx-hero__image" style="position: absolute; top: 0; left: 0; right: 0; z-index: -1;   ">
+        <img src="assets/images/bg-hero.png" alt="" height="0" draggable="false" style="height: 100vh; object-fit: cover; width: 100%;">
       </div>
       <div class="mdx-hero__content " style="color: white !important; max-width: 32rem; position: relative; width: 100%; ">
-        <div style="position: absolute; z-index: 10; left: 0; top: 16.2rem;">
-          <h1  style="color: white !important; text-shadow: 2px 2px 5px black;">Technical documentation that just works</h1>
+        <div style="position: absolute; z-index: 10; left: 0; top: 14rem;"> 
+          <h1  style="color: #22c55e !important;  font-weight: 700; margin-bottom: 5px !important;">Welcome to Chavinci </h1>
           
-          <p style="text-shadow: 2px 2px 5px black;">{{ config.site_description }}. Set up your node in 5 minutes.</p>
-          <a href="{{ '/overview/' | url }}" title="Chavinci Network Overview" class="md-button md-button--primary">
+          <p style="color: white !important; font-weight: 500; ">{{ config.site_description }}</p>
+          <a href="{{ '/overview/' | url }}" title="Chavinci Network Overview" class="md-button md-button--primary button" >
             Quick start
           </a>
-          <a style="text-shadow: 2px 2px 5px black;" href="{{ 'developer/node/' | url }}" title="Chavinci Network for Developer" class="md-button">
+          <a  href="{{ 'developer/node/' | url }}" title="Chavinci Network for Developer" class="md-button">
             Go Node Setup
           </a>
 
