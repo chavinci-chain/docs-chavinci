@@ -82,7 +82,7 @@ nav:
     - Security and Accessibility: overview/security-and-accessibility.md
     - Glossary: https://chavinci.com/glossary
   - Wallet: 
-    - Desktop Wallet: wallet/desktop.md
+    - Cha Core Wallet: wallet/chaCoreWallet.md
     - Mobile Wallet: wallet/mobile.md
   - Developer:
     - Full Node: developer/node.md

@@ -1,4 +1,4 @@
-# Desktop wallet
+# Cha Core wallet
 
 You can get latest desktop wallet from [here](github.com/ChavinciChain/ChavinciChain/releases/latest) or build it on your own using code from [master](https://github.com/ChavinciChain/ChavinciChain/tree/master) branch. Chavinci QT wallet runs on all operating systems: Linux, Mac OS and Windows.
 
@@ -29,3 +29,12 @@ At transactions screen you can check your history of transfers:
 Tokens can be transfered at token transfer screen:
 
 ![Transfer](../assets/images/wallet/desktop/transfer.png)
+
+
+<br/>
+You can add yourself as a node from the wallet:
+```
+addnode 146.190.207.106:22833 add
+```
+
+![Transfer](../assets/images/wallet/desktop/addnode.jpg)
