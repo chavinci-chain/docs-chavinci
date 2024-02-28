@@ -47,6 +47,8 @@ extra:
       link: https://discord.gg/zfJEzYEnVD
 
   analytics: 
+    provider: google
+    property: G-ZFDC0ZZWFD
     feedback:
       title: Was this page helpful?
       ratings:
@@ -85,7 +87,10 @@ nav:
     - Cha Core Wallet: wallet/chaCoreWallet.md
     - Mobile Wallet: wallet/mobile.md
   - Developer:
-    - Full Node: developer/node.md
+    - Run a Node: 
+      - developer/node/node.md
+      - Manually Setup: developer/node/manually-setup.md
+      - Console RPC Functions: developer/node/rpc-functions.md
     - Staking: developer/staking.md
     - Token Metadata: developer/metadata.md
     - Atomic Swaps: developer/atomic.md
@@ -111,11 +116,10 @@ nav:
 
 
 # Copyright
-copyright: Copyright &copy; 2023 Chavinci Network
+copyright: Copyright &copy; 2024 Chavinci Network
 
 extra_css:
   - assets/stylesheets/extra.css
 
 markdown_extensions:
   - admonition
-
