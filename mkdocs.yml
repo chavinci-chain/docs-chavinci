@@ -95,6 +95,8 @@ nav:
     - Token Metadata: developer/metadata.md
     - Atomic Swaps: developer/atomic.md
     - RPC: developer/rpc.md
+    - API reference (JSON-RPC): developer/api_reference.md
+
   
   - Blog & FAQ's:
     - Blog:

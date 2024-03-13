@@ -5,11 +5,11 @@
 Welcome to the guide on setting up a node for the Chavinci Network. This step-by-step tutorial will walk you through the process of deploying your node on a server using Digital Ocean as an example. However, these steps are generally applicable to any server provider you choose.
 
 ## __Hardware and OS Requirements__
-Avalanche is an incredibly lightweight protocol, so nodes can run on commodity hardware. Note that as network usage increases, hardware requirements may change.
+Chavinci is an incredibly lightweight protocol, so nodes can run on commodity hardware. Note that as network usage increases, hardware requirements may change.
 
 * CPU: Equivalent of 2 CPU
 * RAM: 2 GB
-* Storage: 500 GB SSD
+* Storage: 20-40 GB SSD
 
 ## __Prerequisites__
 We recommend supported operating systems:
@@ -73,7 +73,7 @@ We recommend supported operating systems:
         daemon=1
         testnet=1
         staking=1   #Set to 1 to enable staking, 0 to disable, or remove the line entirely.
-        rpcport=8422  #Choose any available port on your server.
+        
 ```
 Save the file and exit the editor.
 
@@ -82,6 +82,7 @@ Save the file and exit the editor.
 - __Launching the Node:__
     1. Exit the `.chachain` directory with `cd ..`.
     ![Figure14](../../assets/images/node/node-14.jpeg)<br/>
+
     2. Start the node using `./chad`. You should see a message indicating that the "ChaChain server is starting".
     3. Verify the node operation with `./cha-cli getblockchaininfo`.
     ![Figure15](../../assets/images/node/node-15.jpeg)<br/>
