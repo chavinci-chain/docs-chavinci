@@ -1,6 +1,6 @@
 # Cha Core wallet
 
-You can get latest desktop wallet from [here](github.com/ChavinciChain/ChavinciChain/releases/latest) or build it on your own using code from [master](https://github.com/ChavinciChain/ChavinciChain/tree/master) branch. Chavinci QT wallet runs on all operating systems: Linux, Mac OS and Windows.
+You can get latest desktop wallet from [here](https://github.com/chavinci-chain/chavinci-releases/releases) or build it on your own using code from [master](https://github.com/chavinci-chain/chavinci-releases/tree/master) branch. Chavinci QT wallet runs on all operating systems: Linux, Mac OS and Windows.
 
 First thing you will see after opening wallet is splash screen:
 
